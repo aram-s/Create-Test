@@ -1,0 +1,224 @@
+.description__row {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.description__block {
+    display: flex;
+    max-width: 1180px;
+    gap: 10px;
+}
+
+.description__block:not(:first-child) {
+    align-items: center;
+}
+
+.block__col:first-child > span {
+    font-size: 183px;
+    font-weight: 700;
+    background: linear-gradient(172.77deg, #8A2645 15.55%, #291725 56.17%, #171422 75.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.block__products {
+    display: flex;
+    column-gap: 41px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.block__product {
+    background-color: #fff;
+    min-width: 268px;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.block__images {
+    display: flex;
+    gap: 90px;
+    margin: 0 auto;
+}
+
+.cards__block {
+    margin-top: 130px;
+}
+.cards__block__row{
+    display: grid;
+    gap: 19px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.cards__block__row > div > .card {
+    border-radius: 10px;
+}
+
+.cards__block__row > div:last-child {
+    grid-area: 1 / 5;
+    position: relative;
+}
+
+.cards__block__row > div:nth-child(2),
+.cards__block__row > div:nth-child(3) {
+    position: relative;
+}
+
+.cardai {
+    position: absolute;
+    top: -110px;
+    right: 48px;
+}
+
+.cardpen {
+    position: absolute;
+    top: -110px;
+    right: 48px;
+}
+
+.cardpdf {
+    position: absolute;
+    top: -200px;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-track {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.track-1,
+.track-2 {
+    height: 280px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.track-1 .scroll-content,
+.track-2 .scroll-content {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.track-1 .scroll-content {
+    animation: scroll-left 20s linear infinite;
+}
+
+.track-2 .scroll-content {
+    animation: scroll-right 20s linear infinite;
+}
+
+.scroll-image {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .card {
+        width: 200px;
+    }
+
+    .cardai {
+        top: -72px;
+        width: 100px;
+    }
+
+    .cardpen {
+        top: -72px;
+        width: 100px;
+    }
+
+    .cardpdf {
+        width: 290px;
+        top: -145px;
+    }
+    
+    .track-1,
+    .track-2 {
+        height: 240px;
+    }
+
+    .block__products {
+        justify-content: center;
+    }
+   
+}
+
+@media (max-width: 996px) {
+    .cards__block__row {
+        display: flex;
+        overflow: auto;
+    }
+
+    .cardai,
+    .cardpdf,
+    .cardpen {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .block__products {
+        column-gap: 20px;
+        row-gap: 10px;
+
+    }
+    .block__product {
+        min-width: 230px;
+
+    }
+    .block__images {
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .cards__block {
+        margin-top: 0;
+    }
+
+    .block__col:first-child > span {
+        font-size: 140px;
+    }
+
+    .track-1,
+    .track-2 {
+        height: 200px;
+    }
+
+}
+

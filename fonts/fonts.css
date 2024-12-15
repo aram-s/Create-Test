@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'GothamPro Regular'; 
+	src: url(./gothampro.woff2); 
+}
+
+@font-face {
+	font-family: 'GothamPro bold'; 
+	src: url(./gothampro_bold.woff2); 
+}
